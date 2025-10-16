@@ -4,7 +4,7 @@ html {
 
 body {
      position: relative;
-     background-image: url('./img/cherry2.jpg');
+     background-image: url('../img/cherry2.jpg');
      background-repeat: no-repeat;
      background-size: cover;
      background-position: center center;
