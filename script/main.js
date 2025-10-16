@@ -1,13 +1,13 @@
 // trigger to play music in the background with sweetalert
 window.addEventListener('load', () => {
     Swal.fire({
-        title: 'Do you want to play music in the background?',
+        title: 'Quieres que se escuche con sonido?',
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes',
-        cancelButtonText: 'No',
+        confirmButtonText: 'Simon',
+        cancelButtonText: 'Nel',
     }).then((result) => {
         if (result.isConfirmed) {
             document.querySelector('.song').play();
@@ -18,6 +18,49 @@ window.addEventListener('load', () => {
     });
 });
 
+const TOTAL_CHERRYBLOSSOM = 50;
+
+const LEAF_PATHS = [
+    "M 4 7 L 5 4 C 12 6 5 15 6 19 C 0 17 -2 8 3 4 L 4 7", // pétalo 1
+    "M 4 8 L 5 5 L 2 6 C 4 -4 11 4 12 -5 C 16 5 9 8 4 8", // pétalo 2
+    "M 3 7 L 6 9 L 8 6 C 8 14 9 13 -3 16 C -8 16 -10 15 -13 9 C -9 13 -5 12 -2 12 C 1 9 3 9 3 7"             // pétalo 3
+];
+
+function createCherryBlossom() {
+    // Crear SVG
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("class", "cherryblossom");
+    svg.setAttribute("width", "24");
+    svg.setAttribute("height", "24");
+    svg.setAttribute("viewBox", "0 0 24 24");
+
+    // Elegir aleatoriamente un diseño
+    const randomPath = LEAF_PATHS[Math.floor(Math.random() * LEAF_PATHS.length)];
+
+    // Crear el path SVG
+    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.setAttribute("fill", "pink");
+    path.setAttribute("d", randomPath);
+    svg.appendChild(path);
+
+    // Posición y animación aleatorias
+    svg.style.left = Math.random() * 100 + "vw";
+    svg.style.animationDuration = Math.random() * 5 + 5 + "s";
+    svg.style.animationDelay = Math.random() * 5 + "s";
+
+    document.body.appendChild(svg);
+
+    // Eliminar tras la animación y crear otro
+    svg.addEventListener("animationend", () => {
+        svg.remove();
+        createCherryBlossom(); // Recursivamente crea otro
+    });
+}
+
+// Crear los pétalos iniciales
+for (let i = 0; i < TOTAL_CHERRYBLOSSOM; i++) {
+    setTimeout(createCherryBlossom, i * 300);
+}
 
 // animation timeline
 const animationTimeline = () => {
@@ -118,7 +161,7 @@ const animationTimeline = () => {
     .from(".idea-2", 0.7, ideaTextTrans)
     .to(".idea-2", 0.7, ideaTextTransLeave, "+=2.5")
     .from(".idea-3", 0.7, ideaTextTrans)
-    .to(".idea-3 strong", 0.5, {
+    .to(".idea-3 strong", 0.7, {
         scale: 1.2,
         x: 10,
         backgroundColor: "rgb(21, 161, 237)",
@@ -255,6 +298,7 @@ const animationTimeline = () => {
         y: 30,
         zIndex: "-1",
     })
+    .staggerFrom(".nine", 1, ideaTextTrans, 1.2)
     .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
     .to(
         ".last-smile",

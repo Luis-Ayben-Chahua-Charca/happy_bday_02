@@ -3,8 +3,16 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
+     position: relative;
+     background-image: url('/img/cherry2.jpg');
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center center;
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     overflow: hidden;
 }
 
 .song {
@@ -28,8 +36,29 @@ body {
   top: 20vh;
 }
 
+.cherryblossom {
+     position: absolute;
+     top: -10%;
+     width: 30px;
+     height: 30px;
+     animation: fall linear 1;
+     will-change: transform;
+ }
+
 .one {
+  background-color: rgba(255, 255, 255);
+  border: 3px solid #aaa;
   font-size: 4.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.one_text {
+  font-size: 4.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 25px;
 }
 
 .two {
@@ -38,10 +67,19 @@ body {
 }
 
 .three {
-  font-size: 3rem;
+  background-color: rgba(255, 255, 255);
+  border: 3px solid #aaa;
+  font-size: 2rem;
+  text-shadow: 
+    2px 2px 0 #ffffff;     /* sombra fuerte */
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 10px;
+  text-transform: uppercase;
 }
 
 .four .text-box {
+  background-color: rgba(255, 255, 255);
   border: 3px solid #aaa;
   border-radius: 5px;
   margin: 0 auto;
@@ -76,14 +114,58 @@ body {
   right: 0;
 }
 
+.five .idea-1 {
+  background-color: rgba(255, 255, 255);
+  border: 3px solid #aaa;
+  font-size: 2rem;
+  max-width: 350px;
+  margin: 0 auto;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.five .idea-2 {
+  background-color: rgba(255, 255, 255);
+  border: 3px solid #aaa;
+  font-size: 2rem;
+  max-width: 350px;
+  margin: 0 auto;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.five .idea-3{
+  background-color: rgba(255, 255, 255, 0.911);
+  border: 3px solid #aaa;
+  margin: 0 auto;
+  max-width: 400px;
+  position: absolute;
+}
+
+.five .idea-4 {
+  background-color: rgba(255, 255, 255);
+  border: 3px solid #aaa;
+  margin: 0 auto;
+  max-width: 300px;
+  position : absolute;
+}
+
 .idea-3 strong {
+
   border-radius: 3px;
   display: inline-block;
   padding: 3px 5px;
 }
 
 .five .idea-5 {
+  background-color: rgba(255, 255, 255);
+  border: 3px solid #aaa;
+  max-width: 800px;
   font-size: 4rem;
+  text-shadow: 
+    2px 2px 0 #ffffff,     /* sombra fuerte */
+    10px 10px 25px #7114b8;
+  margin: 0 auto;
 }
 
 .idea-5 span, .idea-6 span, .wish-hbd span {
@@ -91,7 +173,10 @@ body {
 }
 
 .idea-6 span{
-  font-size: 15rem;
+  text-shadow: 
+    2px 2px 0 #ffffff,     /* sombra fuerte */
+    10px 10px 25px #700fb5;
+  font-size: clamp(8rem, 8vw, 15rem);
 }
 
 
@@ -215,15 +300,41 @@ body {
   margin: 10px 0 0;
 }
 
+.nine {
+  background-color: rgba(255, 255, 255);
+  border: 3px solid #aaa;
+  border-radius: 10px;
+  max-width: 600px;
+  position: center;
+  margin: 0 auto;
+}
+
 .nine p {
   font-size: 2rem;
   font-weight: lighter;
 }
 
 #replay {
+  background-color: rgb(21, 161, 237);
+  border-radius: 3px;
   cursor: pointer;
   z-index: 3;
 }
+
+
+@keyframes fall {
+     0% {
+         transform: translateX(0) translateY(-10vh) rotate(0deg);
+     }
+
+     50% {
+         transform: translateX(20px) translateY(50vh) rotate(180deg);
+     }
+
+     100% {
+         transform: translateX(-20px) translateY(110vh) rotate(360deg);;
+     }
+ }
 
 /* Media Queries */
 @media screen and (max-height: 1000px) {
