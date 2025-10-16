@@ -1,39 +1,40 @@
-## 🎉 Birthday Greeting Webpage 
+## 🎂 Página de Felicitación de Cumpleaños  
 
-[Demo](https://fajarghifar.github.io/happybirthday/)
+Este proyecto está basado en el trabajo original de [@fajarghifar](https://github.com/fajarghifar).  
+💡 Si te gusta esta web, no dudes en visitar su perfil y dejarle una estrella ⭐ en su repositorio original:  
+👉 [Happy Birthday - Fajar Ghifar](https://github.com/fajarghifar/happybirthday)
 
-## 🚀 How to Use
+---
 
-1.  **Clone Repository**
 
-    ```bash
-    # Clone this repository or download it
-    $ git clone https://github.com/fajarghifar/happybirthday
+## 🚀 Cómo usarlo  
 
-    # Go into the repository
-    $ cd happybirthday
+1. **Clonar el repositorio**  
+   ```bash
+   git clone https://github.com/fajarghifar/happybirthday
+   cd happybirthday
+   code .
+   ```
 
-    # Open it with your text editor
-    $ code .
-    ```
+2. **Ejecutar en local**  
+   Abre el proyecto con *Live Server* (extensión de VSCode) o arrastra el archivo `index.html` a tu navegador.
 
-2. **Open with Live Server**
+3. **Desplegar en línea**  
+   Puedes publicar tu versión fácilmente con **GitHub Pages** (en *Settings → Pages*)  
+   o usar servicios como [Netlify](https://www.netlify.com/) o [Vercel](https://vercel.com/).
 
-    Your site is now running!
+---
 
-3. **Deployment**
+## 🧾 Licencia  
 
-    To make your site online, you can enable GitHub Pages for the repository (Settings -> Pages). Alternatively, you can use [Netlify](https://www.netlify.com/).
+Este proyecto está bajo la licencia **MIT**.  
+Consulta el archivo [LICENSE](LICENSE) para más información.
 
-## 📝 Contributing
+---
 
-If you have any ideas to make it more interesting, please submit a pull request or create an issue for a feature request.
+### 👤 Créditos  
 
-## 🤝 License
-
-### [MIT](LICENSE)
-
-> Github [@fajarghifar](https://github.com/fajarghifar) &nbsp;&middot;&nbsp;
-> Youtube [@fajarghifar](https://www.youtube.com/@fajarghifar/) &nbsp;&middot;&nbsp;
-> Instagram [@fajarghifar](https://instagram.com/fajarghifar) &nbsp;&middot;&nbsp;
-> Linkedin [@fajarghifar](https://www.linkedin.com/in/fajarghifar/)
+> Proyecto original por [**@fajarghifar**](https://github.com/fajarghifar)  
+> YouTube: [@fajarghifar](https://www.youtube.com/@fajarghifar/)  
+> Instagram: [@fajarghifar](https://instagram.com/fajarghifar)  
+> LinkedIn: [@fajarghifar](https://www.linkedin.com/in/fajarghifar/)  
